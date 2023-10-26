@@ -16,13 +16,13 @@ sudo mkdir -p $shared_dir
 
 # body_content="Holberton School Web site under construction!"
 # current_date=$(date +"%Y-%m-%d %H:%M:%S")
-html_content="<html>
-  <head></head>
-  <body>$body_content</body>
-  <p>Generated on: $current_date</p>
-</html>"
+#html_content="<html>
+#  <head></head>
+#  <body>$body_content</body>
+#  <p>Generated on: $current_date</p>
+#</html>"
 
-echo "$html_content" | sudo tee /data/web_static/releases/test/index.html > /dev/null
+echo "Hello World" | sudo tee /data/web_static/releases/test/index.html > /dev/null
 
 rm -rf /data/web_static/current
 ln -sf $web_static_dir /data/web_static/current
