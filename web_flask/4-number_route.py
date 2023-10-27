@@ -33,12 +33,11 @@ def python_text(text):
     return "Python " + text
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """displays integers only"""
     if isinstance(n, int):
         return n + " is a number"
-    return
 
 
 if __name__ == '__main__':
