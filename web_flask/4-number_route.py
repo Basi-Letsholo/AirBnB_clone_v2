@@ -37,7 +37,7 @@ def python_text(text):
 def number(n):
     """displays integers only"""
     if isinstance(n, int):
-        return n + " is a number"
+        return "{} is a number".format(n)
 
 
 if __name__ == '__main__':
