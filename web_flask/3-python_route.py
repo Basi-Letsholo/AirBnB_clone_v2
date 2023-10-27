@@ -25,8 +25,10 @@ def c_text(text):
     return "C " + text
 
 
+@app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python_text(text='is cool'):
+def python_text(text):
+    """ returns custom text"""
     text = text.replace("_", " ")
     return "Python " + text
 
